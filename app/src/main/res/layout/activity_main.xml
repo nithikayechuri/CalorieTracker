@@ -20,74 +20,100 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.321" />
 
-    <EditText
-        android:id="@+id/editTextTextPersonName2"
+    <Spinner
+        android:id="@+id/activitySpinner"
         android:layout_width="284dp"
         android:layout_height="60dp"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:minHeight="48dp"
-        android:text="Age"
+        android:background="@android:drawable/btn_dropdown"
+        android:spinnerMode="dropdown"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.181" />
+        app:layout_constraintVertical_bias="0.469" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
+        android:layout_width="284dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#BB86FC"
+        android:ems="10"
+        android:hint="Age"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:textColor="@color/white"
+        android:textColorHint="#a6a6a6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.195" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="170dp"
         android:layout_height="63dp"
+        android:backgroundTint="#BB86FC"
         android:text="Calculate"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.824" />
+        app:layout_constraintVertical_bias="0.893" />
 
     <EditText
         android:id="@+id/editTextTextPersonName4"
         android:layout_width="284dp"
         android:layout_height="60dp"
+        android:backgroundTint="#BB86FC"
         android:ems="10"
+        android:hint="Weight"
         android:inputType="textPersonName"
-        android:text="Weight"
+        android:textColor="@color/white"
+        android:textColorHint="#a6a6a6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.457" />
+        app:layout_constraintVertical_bias="0.591" />
 
     <EditText
         android:id="@+id/editTextTextPersonName5"
         android:layout_width="117dp"
         android:layout_height="60dp"
+        android:backgroundTint="#BB86FC"
         android:ems="10"
+        android:hint="Height(feet)"
         android:inputType="textPersonName"
-        android:text="Height(feet)"
+        android:textColor="@color/white"
+        android:textColorHint="#a6a6a6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.214"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.727" />
 
     <EditText
         android:id="@+id/editTextTextPersonName6"
         android:layout_width="117dp"
         android:layout_height="60dp"
+        android:backgroundTint="#BB86FC"
         android:ems="10"
+        android:hint="Inches"
         android:inputType="textPersonName"
+        android:textColor="@color/white"
 
-        android:text="Inches"
+        android:textColorHint="#a6a6a6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.782"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.608" />
+        app:layout_constraintVertical_bias="0.727" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
