@@ -46,7 +46,7 @@
         android:layout_height="60dp"
         android:backgroundTint="#BB86FC"
         android:ems="10"
-        android:hint="Weight"
+        android:hint="Weight (lbs)"
         android:inputType="textPersonName"
         android:textColor="@color/white"
         android:textColorHint="#a6a6a6"
@@ -96,11 +96,9 @@
         app:layout_constraintTop_toTopOf="parent"
 
         app:layout_constraintVertical_bias="0.727" />
-=======
-        app:layout_constraintVertical_bias="0.679" />
->>>>>>> b15bfd15799905aef3f2d73bada1134fe081444f
 
     <RadioGroup
+        android:id="@+id/radioGroup1"
         android:layout_width="274dp"
         android:layout_height="51dp"
         android:orientation="horizontal"
@@ -109,7 +107,7 @@
         app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.304">
+        app:layout_constraintVertical_bias="0.326">
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,7 +124,7 @@
             android:id="@+id/maleRadio"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Malepirates"
+            android:text="Male"
             android:textColor="@color/white" />
 
         <RadioButton
@@ -139,14 +137,16 @@
     </RadioGroup>
 
     <RadioGroup
+        android:id="@+id/radioGroup2"
         android:layout_width="375dp"
         android:layout_height="51dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.555"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.426">
+        app:layout_constraintVertical_bias="0.46">
 
         <TextView
             android:layout_width="wrap_content"

@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CalorieTracker">
         <activity
+            android:name=".foodSearchBar"
+            android:exported="false" />
+        <activity
+            android:name=".Overview"
+            android:exported="false" />
+        <activity
+            android:name=".CalorieActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
