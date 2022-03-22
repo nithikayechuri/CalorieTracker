@@ -2,7 +2,9 @@ package com.example.calorietracker;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +19,8 @@ public class MainActivity extends AppCompatActivity {
     EditText inchesText;
     RadioGroup radioGroup1;
     RadioGroup radioGroup2;
+    SharedPreferences sharedPreferences;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -72,6 +76,8 @@ public class MainActivity extends AppCompatActivity {
             }
 
             Intent intent = new Intent(MainActivity.this, CalorieActivity.class);
+            getApplicationContext().getSharedPreferences("_", MODE_PRIVATE).edit().putString("calorieString",0+"/"+calories).apply();
+
             intent.putExtra("calories", calories);
             startActivity(intent);
             // Switch to a different activity here

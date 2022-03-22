@@ -5,11 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.opencsv.CSVReader;
 
 import java.io.BufferedReader;
@@ -42,7 +45,6 @@ public class foodSearchBar extends AppCompatActivity {
         searchTxt = findViewById(R.id.editTextFoodSearch);
         searchBtn.setOnClickListener(searchListener);
         listViewFood = findViewById(R.id.listviewfood);
-
     }
 
     public void loadData() {
@@ -88,8 +90,20 @@ public class foodSearchBar extends AppCompatActivity {
         public void onClick(View v) {
             String input = searchTxt.getText().toString();
             List<Food> matches = filteredFood(input);
-            ArrayAdapter<String> adapter = new ArrayAdapter<>(foodSearchBar.this, android.R.layout.simple_list_item_1, foodStrings(matches));
+            ArrayAdapter<String> adapter = new ArrayAdapter<>(foodSearchBar.this,
+                    android.R.layout.simple_list_item_1, foodStrings(matches));
             listViewFood.setAdapter(adapter);
+            listViewFood.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    String selectedItem = (String) parent.getItemAtPosition(position);
+                    Intent intent = new Intent();
+                    intent.setAction("FOODADDED");
+                    intent.putExtra("data",selectedItem);
+                    sendBroadcast(intent);
+                    finish();
+                }
+            });
         }
     };
 }
